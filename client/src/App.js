@@ -50,7 +50,9 @@ if (isLoading || (isAuthenticated && !dbUser.email)){
         <Switch>
           <Route exact path={["/", "/home"]} component={Home}/>
           <Route exact path="/profile" component={Profile}/>
-          <Route exact path="/editprofile" component={Editprofile}/>
+          <Route exact path="/editprofile">
+            <Editprofile pullFromDb = {pullFromDb}/>
+          </Route>
           <Route exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/activity/:id" component={Activitypage}/>
           <Route exact path="/profile/:id" component={Friendprofile}/>

@@ -122,7 +122,9 @@ function imgUpload (event){
         console.log(key[0] + ', ' + key[1]);
     }
     axios.post("https://api.imgbb.com/1/upload?key=d2fc554ff86b5e358c96965640e8004a", fd)
-        .then(res => setProfileInfo({...profileInfo, picture: res.data.data.medium.url}))
+        .then(res => {
+            setProfileInfo({...profileInfo, picture: res.data.data.url})
+        })
         .catch(err => console.log(err))
 }
 

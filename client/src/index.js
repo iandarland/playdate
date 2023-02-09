@@ -9,9 +9,10 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import './index.css'
 
 ReactDOM.render(
+
   <Auth0Provider
-    domain="dev-i4eimx8o.us.auth0.com"
-    clientId="RhW9z7OCDuCXQMJC39u1nf9R2UJyCyE5"
+    domain="dev-qvymre8c27oqhfyw.us.auth0.com"
+    clientId="5ieyZMyV6FNyB4sKNbTygU8S9lJRQD2w"
     redirectUri={window.location.origin}
   >
     <App />
